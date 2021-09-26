@@ -14,9 +14,11 @@ ifdef::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
+== Funktionalität
+Ein Kunde kann in einem Restaurant ein Produkt verzehren,
+dieses Produkt wird von einem Koch zubereitet. Der Kunde wird mit der Telefonnummer, Vor- und Nachname registriert.
 
 === CLD
-
 [plantuml, cld, png, align=left]
 ----
 include::plantuml/cld.puml[]
