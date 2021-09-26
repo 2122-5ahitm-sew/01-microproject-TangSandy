@@ -1,0 +1,28 @@
+@startuml
+
+class Guest {
+   id : Int
+   firstName : String
+   lastName : String
+   telefonNumber : String
+}
+
+class Product {
+   Guest: Guest
+   Cook : Cook
+   id : Int
+   name : String
+   price : Double
+}
+
+class Cook {
+   id : Int
+   firstName : String
+   lastName : String
+}
+
+Product "*" -left-> "1"  Guest: has
+Product "*" -right-> "1"  Cook: is made by
+
+
+@enduml
