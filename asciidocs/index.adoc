@@ -20,10 +20,6 @@ dieses Produkt wird von einem Koch zubereitet. Der Kunde wird mit der Telefonnum
 
 
 === CLD
+image::cld.png[]
 [plantuml, cld, png, align=left]
-----
-include::plantuml/cld.puml[]
-----
-
-
 
