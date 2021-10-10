@@ -19,6 +19,8 @@ class Cook {
    id : Int
    firstName : String
    lastName : String
+   entryDate: LocalDate
+   salary: Double
 }
 
 Product "*" -left-> "1"  Guest: has
