@@ -1,7 +1,6 @@
 package at.htl.restaurant.boundary;
 
 import at.htl.restaurant.entity.Cook;
-import at.htl.restaurant.entity.Product;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import java.time.LocalDate;
