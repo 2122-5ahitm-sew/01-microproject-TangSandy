@@ -1,17 +1,24 @@
 package at.htl.restaurant.entity;
 
+import javax.json.bind.annotation.JsonbDateFormat;
+import javax.json.bind.annotation.JsonbNumberFormat;
+import javax.json.bind.annotation.JsonbProperty;
 import java.time.LocalDate;
 
 public class Cook {
 
     private Long id;
 
+    @JsonbProperty("firstName")
     private String firstName;
 
+    @JsonbProperty("lastName")
     private String lastName;
 
+    @JsonbNumberFormat("salary")
     double salary;
 
+    @JsonbDateFormat("entryDate")
     LocalDate entryDate;
 
     public Cook() {
