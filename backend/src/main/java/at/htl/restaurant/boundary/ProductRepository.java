@@ -3,8 +3,12 @@ package at.htl.restaurant.boundary;
 import at.htl.restaurant.entity.Product;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Transactional
+@ApplicationScoped
 public class ProductRepository implements PanacheRepository<Product> {
 
     public Product findyByName(String name) {
