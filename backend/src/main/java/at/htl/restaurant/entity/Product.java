@@ -1,15 +1,28 @@
 package at.htl.restaurant.entity;
 
+import javax.persistence.*;
+
+@Table(name = "RE_PRODUCT")
+@Entity
 public class Product {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "PR_ID")
     private Long id;
 
+    @Column(name = "PR_NAME")
     private String name;
 
+    @Column(name = "PR_PRICE")
     private double price;
 
+    @ManyToOne
+    @JoinColumn(name = "PR_COOK_ID")
     private Cook cook;
 
+    @ManyToOne
+    @JoinColumn(name = "PR_GUEST_ID")
     private Guest guest;
 
     public Product(String name, double price, Cook cook, Guest guest) {

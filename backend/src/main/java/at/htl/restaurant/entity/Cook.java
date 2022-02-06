@@ -3,21 +3,31 @@ package at.htl.restaurant.entity;
 import javax.json.bind.annotation.JsonbDateFormat;
 import javax.json.bind.annotation.JsonbNumberFormat;
 import javax.json.bind.annotation.JsonbProperty;
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Table(name = "RE_COOK")
+@Entity
 public class Cook {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "CO_ID")
     private Long id;
 
+    @Column(name = "CO_FIRSTNAME")
     @JsonbProperty("firstName")
     private String firstName;
 
+    @Column(name = "CO_LASTNAME")
     @JsonbProperty("lastName")
     private String lastName;
 
+    @Column(name = "CO_SALARY")
     @JsonbNumberFormat("salary")
     double salary;
 
+    @Column(name = "CO_DATE")
     @JsonbDateFormat("entryDate")
     LocalDate entryDate;
 

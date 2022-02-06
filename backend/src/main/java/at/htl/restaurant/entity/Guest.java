@@ -1,13 +1,23 @@
 package at.htl.restaurant.entity;
 
+import javax.persistence.*;
+
+@Table(name = "RE_GUEST")
+@Entity
 public class Guest {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "GU_ID")
     private Long id;
 
+    @Column(name = "GU_FIRSTNAME")
     private String firstName;
 
+    @Column(name = "GU_LASTNAME")
     private String lastName;
 
+    @Column(name = "GU_TELEFONNUMBER")
     private String telefonNumber;
 
     public Guest() {
